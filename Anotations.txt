@@ -1,0 +1,72 @@
+ReactJs
+React é orientado a componentes, e o componente
+principal é o app.js.
+
+Criando um projeto
+1º - npm i create-react-app
+2º - create-react-app meu site
+3º - Retirar o componente principal
+4º - 
+
+Plugin VsCode
+- React-Native/React/Redux snippets for es6/es7
+- Reactjs code snippets
+
+Estrutura do ReactJs
+- public > São as coisas que o user final vê.
+    manifest.json
+- package.json > dependência do projeto
+- src > código
+
+Oque é uma prop?
+    - Alguma propriedade que vai ser passada para um componente
+    - Propriedades dos componentes
+
+JSX é parecido com HTML, mas não é.
+
+Tipos de componentes:
+    - Stateless component - componente burro, não tem estado
+    const BemVindo = (props) => {return (
+        <div>
+            <p>Nome: {props.nome}</p>
+            <p>Sexo: {props.sexo}</p>
+            <p>Idade: {props.idade}</p>
+        </div>
+    );};
+
+    - Class component
+    class Equipe extends Component {
+        constructor(props) {
+            super(props);
+            this.state = {};
+        }
+        render() {
+            return (
+                <div>
+                    <h2>Funcionou!, {this.props.nome}</h2>
+                </div>
+            );
+        }
+    }
+
+    Dentro de um class component tem estados (states)
+    Ciclo de vida de um componente: 
+        Primeiro a ser lido é o construtor
+        - componentDidMount - Após ele ser renderizado
+        - componentDidUpdate - Após ser atualizado
+        - solsComponentUpdate - O componente deve ser atualizado?
+
+Exibição condicional de um componente 
+    <div>
+        {this.state.exibir && <Membro nome="Visitante"/>}
+        {this.state.exibir ? <Membro nome="Visitante"/> : <p>Não pode</p>}
+    </div>
+
+-Router
+npm install react-router-dom
+
+- Styled componentes
+
+- React Hooks - useState (states do componente), useEffect (eventos do componente faz mas não retorna) , 
+useMemo (retorna algo),
+useCallback (function devem ser criadas usando esse cara, não retorna nada)
